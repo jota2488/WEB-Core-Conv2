@@ -43,6 +43,11 @@ namespace WEB_Core_Conv2.Controllers
             return View(pacientes);
         }
 
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
