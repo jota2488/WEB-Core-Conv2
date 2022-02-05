@@ -1,0 +1,52 @@
+﻿
+@model List<WEB_Core_Conv2.Models.Paciente>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1 class="text-info">Lista de pacientes</h1>
+
+<div>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Nombre Cliente
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Edad
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Edad</td>
+                        <td>@item.Telefono</td>
+                    </tr>
+                }
+            }
+        </tbody>
+
+    </table>
+</div>
+
+<div>
+    <a class="btn btn-outline-primary">Crear Nuevo</a>
+</div>
+
+<hr />
+
+@DateTime.Now.ToShortDateString()
